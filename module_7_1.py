@@ -22,13 +22,13 @@ class Shop():
     def add(self, *products):
         for i in products:
             s = (str(i))
-            file = open(self.__file_name, 'w')
+            file = open('products.txt', 'w')
             f = file.write()
             file.close()
             if s in f:
                 print(f'Продукт {s} уже есть в магазине')
             else:
-                file = open(self.__file_name, 'a')
+                file = open('products.txt', 'a')
                 file.write(f'\n{s}')
                 file.close()
 
